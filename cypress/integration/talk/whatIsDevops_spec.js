@@ -7,7 +7,8 @@ describe('Acessar What is DevOps', function(){
 	})
 
 	it('Click Menu What is DevOps', function() {
-		cy.clickMenu('What is DevOps');
+		cy.clickMenu('What is DevOps')
+		cy.wait(2000)
 	})
 
 	it('Validate text on page', function(){
@@ -24,6 +25,7 @@ describe('Acessar What is DevOps', function(){
 		]
 
 		// cy.expectTextArray(textsPage)
+		cy.wait(2000)
 		cy.verifyTextArray(textsPage)
 	})
 })

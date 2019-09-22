@@ -7,7 +7,8 @@ describe('Acessar Who We Are do Site iDevops', function(){
 	})
 
 	it('Click Menu Who We Are', function() {
-		cy.clickMenu('Who We Are');
+		cy.clickMenu('Who We Are')
+		cy.wait(2000)
 	})
 
 	it('Validate text on page', function(){
@@ -21,6 +22,7 @@ describe('Acessar Who We Are do Site iDevops', function(){
 		]
 
 		// cy.expectTextArray(textsPage)
+		cy.wait(2000)
 		cy.verifyTextArray(textsPage)
 	})
 })

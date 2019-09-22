@@ -8,6 +8,7 @@ describe('Acessar Main DevOps Tools do Site iDevops', function(){
 
 	it('Click Menu Main DevOps Tools', function() {
 		cy.clickMenu('Main DevOps Tools');
+		cy.wait(2000)
 	})
 
 	it('Validate text on page', function(){
@@ -30,5 +31,6 @@ describe('Acessar Main DevOps Tools do Site iDevops', function(){
 
 		// cy.expectTextArray(textsPage)
 		cy.verifyTextArray(textsPage)
+		cy.wait(2000)
 	})
 })

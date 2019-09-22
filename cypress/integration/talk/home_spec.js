@@ -4,6 +4,7 @@ describe('Acessar home iDevops', function() {
 	
 	it('Access login page', function() {
 		cy.visit('/')
+		cy.wait(2000)
 
 	})
 
@@ -16,6 +17,7 @@ describe('Acessar home iDevops', function() {
 		]
 
 		// cy.expectTextArray(textsPage)
+		cy.wait(2000)
 		cy.verifyTextArray(textsPage)
 
 	})
