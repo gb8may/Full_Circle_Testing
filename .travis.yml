@@ -1,0 +1,16 @@
+sudo: required
+
+services:
+  - docker
+
+install:
+  - docker run -it -v $PWD:/e2e -w /e2e -e CYPRESS_RECORD_KEY="key_of_your_dashboard" cypress/included:3.4.0 --record --parallel
+  # Put the key of your Cypress dashboard on CYPRESS_RECORD_KEY variable without ""
+
+notifications: 
+  email:
+    recipients:
+      - gb8may@gmail.com
+      
+    on_success: always
+    on_failure: always
