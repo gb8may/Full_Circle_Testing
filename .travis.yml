@@ -1,5 +1,6 @@
-sudo: required
+languade: python
 
+sudo: required
 service:
   - docker
 
