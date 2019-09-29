@@ -9,7 +9,7 @@ before_install:
   - npm install tslint
 
 install:
-  - npm run cy:run:smoke -- --record --key $CY_KEY --parallel
+  - npm run cy:run:smoke -- --record --key $CY_KEY --parallel --group nodes
   - kill $(jobs -p) || true
 
 notifications: 
