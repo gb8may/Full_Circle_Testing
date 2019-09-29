@@ -9,7 +9,7 @@ before_install:
   - npm install tslint
 
 install:
-  - npm run cy:run:smoke -- --record --key $CY_KEY
+  - npm run cy:run:smoke -- --browser chrome
   - kill $(jobs -p) || true
 
 notifications: 
