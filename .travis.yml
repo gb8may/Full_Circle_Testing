@@ -1,14 +1,13 @@
-languade: python
+languade: ruby
 
 sudo: required
-service:
+
+services:
   - docker
 
 before_install: 
   - sudo apt-get install libgconf-2-4
   - npm install tslint
-
-Install:
   - docker run --rm -it -v $PWD:/e2e -w /e2e -e cypress/included:3.4.0
   - kill $(jobs -p) || true
 
