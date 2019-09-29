@@ -1,0 +1,18 @@
+sudo: required
+
+#services:
+  #- docker
+
+install:
+  - npm run cy:run:smoke -- --record --key $CY_KEY
+  - kill $(jobs -p) || true
+  #- docker run -it -v $PWD:/e2e -w /e2e -e CYPRESS_RECORD_KEY=$CY_KEY cypress/included:3.4.0 --record --parallel
+  # Put the key of your Cypress dashboard on CYPRESS_RECORD_KEY variable without ""
+
+notifications: 
+  email:
+    recipients:
+      - gb8may@gmail.com
+      
+    on_success: never
+    on_failure: never
