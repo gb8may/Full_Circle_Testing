@@ -4,6 +4,7 @@ sudo: required
   #- docker
 
 install:
+  - npm install
   - npm run cy:run:smoke -- --record --key $CY_KEY
   - kill $(jobs -p) || true
   #- docker run -it -v $PWD:/e2e -w /e2e -e CYPRESS_RECORD_KEY=$CY_KEY cypress/included:3.4.0 --record --parallel
