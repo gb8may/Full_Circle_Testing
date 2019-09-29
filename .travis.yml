@@ -4,6 +4,10 @@ node_js:
 
 sudo: required
 
+before_install: 
+  - sudo apt-get install libgconf-2-4
+  - npm install tslint
+
 install:
   - npm run cy:run:smoke -- --record --key $CY_KEY
   - kill $(jobs -p) || true
