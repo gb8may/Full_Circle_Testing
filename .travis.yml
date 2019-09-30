@@ -7,9 +7,9 @@ sudo: required
 services:
   - docker
 
-before_install: 
-  - sudo apt-get install libgconf-2-4
-  - npm install tslint
+#before_install: 
+#  - sudo apt-get install libgconf-2-4
+#  - npm install tslint
 
 testSmokeCy: &testSmokeCy
   script:
