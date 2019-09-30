@@ -34,3 +34,10 @@ notifications:
       
     on_success: never
     on_failure: never
+
+cache:
+  apt: true
+  docker: true
+  directories:
+  - ~/.docker
+  - ~/.cache
