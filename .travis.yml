@@ -18,6 +18,9 @@ jobs:
     <<: *testSmokeCy
   - script:
     name: "Cypress Container 2"
+    <<: *testSmokeCy  
+  - script:
+    name: "Cypress Container 3"
     <<: *testSmokeCy
 
 notifications: 
