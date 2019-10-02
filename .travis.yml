@@ -1,6 +1,5 @@
 language: bash
 sudo: required
-#New
 services:
   - docker
 
@@ -25,8 +24,8 @@ notifications:
     recipients:
       - gb8may@gmail.com
       
-    on_success: never
-    on_failure: never
+    on_success: always
+    on_failure: always
 
 cache:
   apt: true
